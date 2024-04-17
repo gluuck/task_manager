@@ -5,6 +5,6 @@ FactoryBot.define do
     author_id 
     assignee_id 
     state 
-    expired_at { "2024-04-15" }
+    expired_at
   end
 end
