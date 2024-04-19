@@ -5,4 +5,5 @@ FactoryBot.define do
 
   sequence(:email) { |n| "person#{n}@example.com" }
   sequence(:expired_at) { Time.now + 5.days }
+  sequence(:type) { %w[Developer Manager Admin].sample }
 end
