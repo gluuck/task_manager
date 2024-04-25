@@ -13,7 +13,7 @@ html lang="en"
 
 
   body
-    = javascript_packs_with_chunks_tag 'application'
+
     header.mdl-layout__header
       .mdl-layout__header-row
         .material-icons tab
@@ -23,9 +23,13 @@ html lang="en"
           = "Task Manager"
         .mdl-layout-spacer
         nav.mdl-navigation
+    = render 'shared/registration'    
     main#main.mdl-layout__content
+     
       .page-content
+       
         = yield
+
     footer#footer.mdl-mini-footer
       .mdl-mini-footer__left-section
         .mdl-logo
