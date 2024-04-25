@@ -3,7 +3,7 @@ class SessionForm
 
   attr_accessor(
     :email,
-    :password
+    :password,
   )
 
   validates :email, presence: true, format: { with: /\A\S+@.+\.\S+\z/ }
@@ -11,15 +11,14 @@ class SessionForm
   validate :user_valid?
 
   def user
-    User.find_by(email: email)
+    User.find_by(email:)
   end
 
   private
 
   def user_valid?
     if user.blank? || !user.authenticate(password)
-      errors.add(:email, "email or password doesn't match" )
+      errors.add(:email, "email or password doesn't match")
     end
   end
-
 end
