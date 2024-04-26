@@ -23,9 +23,13 @@ html lang="en"
           = "Task Manager"
         .mdl-layout-spacer
         nav.mdl-navigation
+    = render 'shared/registration'    
     main#main.mdl-layout__content
+     
       .page-content
+       
         = yield
+
     footer#footer.mdl-mini-footer
       .mdl-mini-footer__left-section
         .mdl-logo
