@@ -11,6 +11,10 @@ class Api::V1::ApplicationController < Api::ApplicationController
     }
   end
 
+  def self.responder
+    JsonResponder
+  end
+
   def ransack_params
     params.to_unsafe_h.fetch(:q, { s: RANSACK_DEFAULT_SORT })
   end
