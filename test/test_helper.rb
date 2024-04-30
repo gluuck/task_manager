@@ -7,4 +7,5 @@ class ActiveSupport::TestCase
   parallelize(workers: :number_of_processors)
 
   include FactoryBot::Syntax::Methods
+  include AuthHelper
 end
